@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thitruong.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSummary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentTop="false"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTop"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="64dp"
+                android:layout_height="44dp"
+                android:layout_margin="0dp"
+                android:src="@drawable/menu" />
+
+            <EditText
+                android:id="@+id/txtSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.67"
+                android:background="@drawable/corner"
+                android:ems="10"
+                android:radius="25dp" />
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="55dp"
+                android:layout_height="44dp"
+                android:focusable="false"
+                android:src="@drawable/icon_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LayoutCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="550dp"
+            android:layout_weight="880"
+            android:background="#e6fce6"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0"
+                android:background="@drawable/bottom" >
+
+                <TextView
+                    android:id="@+id/txtKey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Danh sách sản phẩm danh mục"
+                    android:textColor="#009b04" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/menu" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_weight="2.43"
+                android:orientation="horizontal" >
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnWidth="90dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="right"
+            android:text="Text demo"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</RelativeLayout>
